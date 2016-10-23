@@ -13,9 +13,9 @@ public class MultiplyOperation implements Operation {
         this.rightOperand = rightOperand;
     }
 
-    public NumberOperation interprete() {
-        NumberOperation evaluatedLeftOperation = leftOperand.interprete();
-        NumberOperation evaluatedRightOperation = rightOperand.interprete();
+    public NumberOperation interprete(Context context) {
+        NumberOperation evaluatedLeftOperation = leftOperand.interprete(context);
+        NumberOperation evaluatedRightOperation = rightOperand.interprete(context);
         return new NumberOperation(evaluatedLeftOperation.getValue() * evaluatedRightOperation.getValue());
     }
 }

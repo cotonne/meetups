@@ -30,7 +30,7 @@ public class NumberOperation implements Operation {
         this.value = i;
     }
 
-    public NumberOperation interprete() {
+    public NumberOperation interprete(Context context) {
         return this;
     }
 }
