@@ -13,9 +13,9 @@ On pourra s'appuyer sur une base de données ou sur l'API suivante : http://secu
 
 ### S'enregistrer
 
-**En tant que** utilisateur
-**Je veux** m'enregistrer
-**Afin de** accéder à NetFlix2
+**En tant que** utilisateur  
+**Je veux** m'enregistrer  
+**Afin de** accéder à NetFlix2  
 
 Exemple de sortie console de votre application
 ```
@@ -28,9 +28,9 @@ pouce
 
 ### Se connecter
 
-**En tant que** utilisateur
-**Je veux** me connecter
-**Afin de** commander les films sur la plateforme
+**En tant que** utilisateur  
+**Je veux** me connecter  
+**Afin de** commander les films sur la plateforme  
 
 Exemple de sortie console de votre application
 ```
@@ -44,9 +44,9 @@ You are connected as tom
 
 ### Lister les films disponibles
 
-**En tant que** utilisateur
-**Je veux** lister les films disponibles
-**Afin de** savoir quels films sont présents
+**En tant que** utilisateur  
+**Je veux** lister les films disponibles  
+**Afin de** savoir quels films sont présents  
 
 Exemple de sortie console de votre application
 ```
@@ -57,9 +57,9 @@ H1)	Harry Potter and the Philosopher's Stone
 
 ### Commander un film
 
-**En tant que** utilisateur
-**Je veux** commander un film
-**Afin de** pouvoir les visionner
+**En tant que** utilisateur  
+**Je veux** commander un film  
+**Afin de** pouvoir les visionner  
 
 Exemple de sortie console de votre application
 ```
