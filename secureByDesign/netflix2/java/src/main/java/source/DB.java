@@ -2,12 +2,12 @@ package source;
 
 import java.sql.*;
 
-public class Database {
-    private static final String url = "jdbc:h2:mem:test";
+public class DB {
+    private static final String url = "jdbc:h2:mem:test;INIT=RUNSCRIPT FROM 'classpath:/init.sql'";
     private static Connection conn = null;
 
     private static Connection instance() {
-        if(conn != null)
+        if (conn != null)
             return conn;
 
         try {
@@ -17,21 +17,30 @@ public class Database {
         }
 
         try {
-            conn = DriverManager.
-                    getConnection(url);
+            conn = DriverManager.getConnection(url);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return conn;
     }
 
-    public ResultSet execute(String query) {
+    public static ResultSet execute(String query) {
         try {
             Statement stmt = instance().createStatement();
             return stmt.executeQuery(query);
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public static boolean insert(String query) {
+        try {
+            Statement stmt = instance().createStatement();
+            return stmt.execute(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }
