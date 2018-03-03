@@ -14,7 +14,7 @@ public class Main {
         register(userId, password);
 
         System.out.println("Connection : ");
-        System.out.println("Identifiant:");
+        System.out.println("Identifier:");
         userId = s.next();
         System.out.println("Password:");
         password = s.next();
