@@ -32,8 +32,14 @@ public class Main {
             int quantity = s.nextInt();
 
             booking(dvdId, quantity, userId);
+
+            System.out.println("Final prix : 8€ x n DVD = " + finalPrice(quantity));
         }
 
+    }
+
+    private static int finalPrice(int quantity) {
+        return 0;
     }
 
     private static void register(String userId, String password) {

@@ -70,5 +70,17 @@ Quantity:
 Your command of 1 DVD ( Harry Potter and the Philosopher's Stone ) will be sent soon
 ```
 
+### Afficher  le prix d'un film
+
+**En tant que** utilisateur  
+**Je veux** connaitre le prix final  
+**Afin de** pouvoir payer mon achat
+
+Exemple de sortie console de votre application
+```
+Final prix : 8€ x n1 DVD = 8€
+```
+
+
 
 
