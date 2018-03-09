@@ -7,9 +7,14 @@ Alors, préparez-vous, la route est semée d'embûches.
 
 ## L'application
 
-L'application peut très bien être une application en mode console,
-comme une application web.
-On pourra s'appuyer sur une base de données ou sur l'API suivante : http://secure-by-design.us-east-2.elasticbeanstalk.com
+L'application est une application en mode console.
+Elle est connectée à une base de données.
+Seul le fichier "Main" doit être modifié.
+
+
+## Use cases
+
+A vous de jouer! En tant que PO, voici les use cases demandés:
 
 ### S'enregistrer
 
