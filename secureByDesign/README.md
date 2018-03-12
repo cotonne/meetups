@@ -75,15 +75,19 @@ Quantity:
 Your command of 1 DVD ( Harry Potter and the Philosopher's Stone ) will be sent soon
 ```
 
-### Afficher  le prix d'un film
+### Réduction sur le prix d'un film
 
 **En tant que** utilisateur  
-**Je veux** connaitre le prix final  
-**Afin de** pouvoir payer mon achat
+**Je veux** pouvoir bénéficier de réduction
+**Afin de** avoir accès à des offres intéressantes et payer moins chère
+
+**Etant donné** la quantité de DVD sélectionnée par l'utilisateur (ex: 2 DVD)
+**Quand** le prix est calculé
+**Alors** le prix final comprend une réductionn de 10% s'il prend un DVD de plus
 
 Exemple de sortie console de votre application
 ```
-Final prix : 8€ x n1 DVD = 8€
+Nombre de DVD : 2, prix final: 8€ x 2 DVD = 16€, Si vous en prenez un de plus : 8€ x 3 DVD = 21.6€
 ```
 
 
