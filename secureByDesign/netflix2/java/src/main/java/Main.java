@@ -22,6 +22,7 @@ public class Main {
         password = s.next();
 
         if (login(userId, password)) {
+            System.out.println("Vous êtes connecté en tant que " + userId);
             System.out.println("Films:");
 
             // List DVD HERE
