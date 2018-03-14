@@ -23,6 +23,18 @@ namespace Netflix2.repository
             return DB.Insert($"INSERT INTO USERS(ID, PASSWORD) values('{userId}', '{password}')");
         }
 
+        /**
+         * Check if a user
+         * @param userId identifier of a user
+         * @param password password
+         * @return true if the user exists, false otherwise
+         */
+        public static bool Exist(string userId, string password)
+        {
+            var numberOfUsers = DB.ExecuteScalar<long>($"SELECT count(1) FROM USERS where id='{userId}' AND password='{password}'");
+            return numberOfUsers > 0;
+        }
+
     }
 
     public static class DB
@@ -37,6 +49,19 @@ namespace Netflix2.repository
                     cmd.CommandText = query;
                     var result = cmd.ExecuteNonQuery();
                     return result == 1;
+                }
+            }
+        }
+
+        public static T ExecuteScalar<T>(string query)
+        {
+            using (var cnx = GetConnection())
+            {
+                cnx.Open();
+                using (var cmd = cnx.CreateCommand())
+                {
+                    cmd.CommandText = query;
+                    return (T)cmd.ExecuteScalar();
                 }
             }
         }
