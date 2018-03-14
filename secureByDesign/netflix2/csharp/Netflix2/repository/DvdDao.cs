@@ -17,5 +17,10 @@ namespace Netflix2.repository
                 }
             }
         }
+
+        public static string GetDvdNameById(string id)
+        {
+            return DB.ExecuteScalar<string>($"SELECT NAME FROM DVDS WHERE ID = {id}");
+        }
     }
 }

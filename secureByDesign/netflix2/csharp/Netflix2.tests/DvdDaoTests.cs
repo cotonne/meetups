@@ -16,5 +16,12 @@ namespace Netflix2.tests
             var actual = DvdDao.GetIdentifiers();
             Check.That(actual.Count()).IsEqualTo(8);
         }
+
+        [Test]
+        public void GetDvdNameById_Ok()
+        {
+            var actual = DvdDao.GetDvdNameById("3");
+            Check.That(actual).IsEqualTo(actual);
+        }
     }
 }
