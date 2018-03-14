@@ -1,3 +1,5 @@
+import repository.UserDao;
+
 import java.util.Scanner;
 
 public class Main {
@@ -33,13 +35,10 @@ public class Main {
 
             booking(dvdId, quantity, userId);
 
-            System.out.println("Final prix : 8€ x n DVD = " + finalPrice(quantity));
+            System.out.println("Nombre de DVD : " + quantity + " , prix final: 8€ x " + quantity + " DVD = " + quantity * 8 +
+                    ", Si vous en prenez un de plus : 7€ x " + (quantity + 1) + " DVD = " + (quantity + 1) * 7 + " €");
         }
 
-    }
-
-    private static int finalPrice(int quantity) {
-        return 0;
     }
 
     private static void register(String userId, String password) {

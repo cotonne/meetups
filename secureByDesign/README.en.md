@@ -83,11 +83,11 @@ Your command of 1 DVD ( Harry Potter and the Philosopher's Stone ) will be sent 
 
 **Given** a quantity of DVD
 **When** the price is calculated
-**Then** a 10% discount should be proposed given the user buys one more DVD
+**Then** a 7€/DVD should be proposed given the user buys one more DVD
 
 Example
 ```
-Number of DVDs : 2, final price : 8€ x 2 DVD = 16€, If you take one more : 8€ * 3 DVD = 21.6€
+Number of DVDs : 2, final price : 8€ x 2 DVD = 16€, If you take one more : 7€ * 3 DVD = 21€
 ```
 
 

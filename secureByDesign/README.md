@@ -83,11 +83,11 @@ Your command of 1 DVD ( Harry Potter and the Philosopher's Stone ) will be sent 
 
 **Etant donné** la quantité de DVD sélectionnée par l'utilisateur (ex: 2 DVD)
 **Quand** le prix est calculé
-**Alors** le prix final comprend une réductionn de 10% s'il prend un DVD de plus
+**Alors** le prix final tombe à 7€ par DVD s'il prend un DVD de plus
 
 Exemple de sortie console de votre application
 ```
-Nombre de DVD : 2, prix final: 8€ x 2 DVD = 16€, Si vous en prenez un de plus : 8€ x 3 DVD = 21.6€
+Nombre de DVD : 2, prix final: 8€ x 2 DVD = 16€, Si vous en prenez un de plus : 7€ x 3 DVD = 21€
 ```
 
 

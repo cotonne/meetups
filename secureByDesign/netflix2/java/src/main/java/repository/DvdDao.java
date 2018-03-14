@@ -32,7 +32,7 @@ public class DvdDao {
      * Get the name of the DVD
      *
      * @param id identifier of the DVD
-     * @return list of DVD as pair : String[0] = id, String[1] = name
+     * @return list of DVD names
      */
     public static String getDvdNameById(String id) {
         Collection<String[]> dvds = new ArrayList<>();
