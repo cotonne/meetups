@@ -1,5 +1,4 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.SQLite;
 
 namespace Netflix2.repository

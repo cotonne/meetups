@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Netflix2.repository
+﻿namespace Netflix2.repository
 {
     public class UserDao
     {

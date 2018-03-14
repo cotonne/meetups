@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Netflix2.repository
+﻿namespace Netflix2.repository
 {
     public static class BookingDao
     {
