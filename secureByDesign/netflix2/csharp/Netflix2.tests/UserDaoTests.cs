@@ -13,7 +13,7 @@ namespace Netflix2.tests
     public class UserDaoTests
     {
         [Test]
-        public void Test1()
+        public void Insert_User()
         {
             var result = UserDao.Register("toto", "pwd");
             Check.That(result).IsEqualTo(true);

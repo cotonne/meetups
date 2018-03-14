@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SQLite;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,43 +30,6 @@ namespace Netflix2.repository
         {
             var numberOfUsers = DB.ExecuteScalar<long>($"SELECT count(1) FROM USERS where id='{userId}' AND password='{password}'");
             return numberOfUsers > 0;
-        }
-
-    }
-
-    public static class DB
-    {
-        public static bool Insert(string query)
-        {
-            using (var cnx = GetConnection())
-            {
-                cnx.Open();
-                using (var cmd = cnx.CreateCommand())
-                {
-                    cmd.CommandText = query;
-                    var result = cmd.ExecuteNonQuery();
-                    return result == 1;
-                }
-            }
-        }
-
-        public static T ExecuteScalar<T>(string query)
-        {
-            using (var cnx = GetConnection())
-            {
-                cnx.Open();
-                using (var cmd = cnx.CreateCommand())
-                {
-                    cmd.CommandText = query;
-                    return (T)cmd.ExecuteScalar();
-                }
-            }
-        }
-
-        private static SQLiteConnection GetConnection()
-        {
-            var connectionString = ConfigurationManager.ConnectionStrings["Netflix2"].ConnectionString;
-            return new SQLiteConnection(connectionString);
         }
     }
 }
