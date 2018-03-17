@@ -10,25 +10,25 @@ namespace Netflix2.tests
         [Test]
         public void Insert_User()
         {
-            var result = UserDao.Register("toto", "pwd");
-            Check.That(result).IsEqualTo(true);
+            var userId = UserHelper.CreateUserId();
+            var result = UserDao.Register(userId, "pwd");
+            Check.That(result).IsTrue();
         }
 
         [Test]
         public void Exist_User()
         {
-            UserDao.Register("totoExist", "pwd");
-            var actual = UserDao.Exist("totoExist", "pwd");
+            var userId = UserHelper.CreateUserId();
+            UserDao.Register(userId, "pwd");
+            var actual = UserDao.Exist(userId, "pwd");
             Check.That(actual).IsTrue();
         }
 
         [Test]
         public void Exist_NoUser()
         {
-            var actual = UserDao.Exist("totoZorglub", "pwd");
+            var actual = UserDao.Exist("totoZorglub", "pwdImpossible");
             Check.That(actual).IsFalse();
-
         }
-
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using Netflix2.repository;
+﻿using Netflix2.repository;
 using NFluent;
 using NUnit.Framework;
 
@@ -11,8 +10,7 @@ namespace Netflix2.tests
         [Test]
         public void Book_Ok()
         {
-            var userId = "User" + Guid.NewGuid();
-            UserDao.Register(userId, "pwd");
+            var userId = UserHelper.Create();
             var actual = BookingDao.Book("3", 10, userId);
             Check.That(actual).IsTrue();
         }
